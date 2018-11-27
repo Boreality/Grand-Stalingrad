@@ -8,12 +8,15 @@ switch(soldier_state)
 		if(order_position_x != -1) && (order_position_y != -1) // if has desitnation
 		{
 			direction = point_direction(x,y,order_position_x,order_position_y);
-			speed = 4;
+			hsp = lengthdir_x(3,direction);
+			vsp = lengthdir_y(3,direction);
+			//speed = 4;
 			available = false;
 			
-			if(point_in_circle(x,y,order_position_x,order_position_y,3))
+			if(point_in_circle(x,y,order_position_x,order_position_y,30))
 			{
-				speed = 0;
+				hsp = 0;
+				vsp  =0;
 				direction = 0;
 				order_position_x = -1;
 				order_position_y = -1;
@@ -71,3 +74,6 @@ switch(soldier_state)
 }
 if(obj_cursor.selected == noone) highlighted = false;
 if(obj_cursor.selected == id) highlighted = true;
+
+x += hsp;
+y += vsp;
