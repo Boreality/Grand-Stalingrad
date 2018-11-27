@@ -6,6 +6,8 @@ key_escape = keyboard_check_pressed(vk_escape);
 key_middlemouse = mouse_check_button(mb_middle);
 key_fire = keyboard_check_pressed(ord("B"));
 
+if(!instance_exists(selected)) selected = noone;
+
 if(lclick)  && (place_meeting(x,y,obj_soldier))
 {
 	selected = collision_point(x,y,obj_soldier,false,true)
@@ -40,16 +42,14 @@ switch(cursor_state)
 	break;
 	case mode.target:
 		image_index = 1;
+		
 		if(rclick) && (selected != noone) && (selected.available)
 		{
 			with(selected)
 			{
-			firing_location_x = x;
-			firing_location_y = y;
-			//order_position_x = -1;
-			//order_position_y = -1;
-			speed = 0;
-			//soldier_state = status.fire;
+    			firing_location_x = other.x;
+    			firing_location_y = other.y;
+    			soldier_state = status.fire;
 			}
 		}
 	break;

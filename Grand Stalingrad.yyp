@@ -71,6 +71,22 @@
             }
         },
         {
+            "Key": "17ed59ab-dc7d-43ca-87b2-2209180332af",
+            "Value": {
+                "id": "84494931-4b36-49d8-8fb6-39c692683f03",
+                "resourcePath": "sprites\\spr_soldier_dead\\spr_soldier_dead.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "18d470a8-6c44-4edf-bcaf-83153a4c58dd",
+            "Value": {
+                "id": "c2af8047-1dc4-4a48-b6c3-edd361af867e",
+                "resourcePath": "objects\\obj_wall\\obj_wall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1b9758ef-058b-42e0-aff2-dc450f86d3bd",
             "Value": {
                 "id": "29758a51-41b6-454b-aea0-bceb76c57f4e",
@@ -203,6 +219,14 @@
             "Value": {
                 "id": "16918cda-0535-4915-a924-e0a18c667fb4",
                 "resourcePath": "objects\\obj_gui_duck\\obj_gui_duck.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9a54f2b3-f5d3-4dc6-b527-d865fab7a189",
+            "Value": {
+                "id": "5556f648-e66d-4bc7-a1ea-318fbe8347ca",
+                "resourcePath": "objects\\obj_soldier_dead\\obj_soldier_dead.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -340,6 +364,14 @@
                 "id": "3ce3970c-ef9d-4158-9d87-e3ed9fdd0fec",
                 "resourcePath": "views\\edb043fe-51f2-47a0-88dd-4079cdb1f35d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f030c196-b6dc-4d6e-bcba-84f06adcfb0a",
+            "Value": {
+                "id": "9c9f6798-3b86-4d56-b4c1-b5be9cb5293f",
+                "resourcePath": "sprites\\spr_wall\\spr_wall.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
