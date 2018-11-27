@@ -11,7 +11,7 @@ key_duck = keyboard_check_pressed(ord("F"));
 
 if(!instance_exists(selected)) selected = noone;
 
-if(lclick)  && (place_meeting(x,y,obj_soldier))
+if(lclick) && (place_meeting(x,y,obj_soldier))
 {
 	selected = collision_point(x,y,obj_soldier,false,true)
 }
@@ -68,6 +68,12 @@ switch(cursor_state)
 					owner = obj_cursor.selected;	
 					with(obj_cursor.selected) hasgun = true;
 				}
+			}
+			else
+			{
+				selected.order_position_x = id.x;
+				selected.order_position_y = id.y;
+				selected.soldier_state = status.movement;
 			}
 		}
 		if(!place_meeting(x,y,obj_gun)) cursor_state = mode.cursor; grab_object = noone;
