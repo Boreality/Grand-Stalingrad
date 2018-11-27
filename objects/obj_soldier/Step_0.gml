@@ -15,8 +15,7 @@ switch(soldier_state)
 			
 			if(point_in_circle(x,y,order_position_x,order_position_y,30))
 			{
-				hsp = 0;
-				vsp  =0;
+				halt_movement();
 				direction = 0;
 				order_position_x = -1;
 				order_position_y = -1;
@@ -30,12 +29,14 @@ switch(soldier_state)
 	    //Canceling traveling stage
 	    if(reset_movement_check)
 	    {
-    		speed = 0;
+    		halt_movement();
     		direction = 0;
+			
     		order_position_x = -1;
             order_position_y = -1;
 			firing_location_x = -1;
 			firing_location_y = -1;
+			
     		available = true;   
     		reset_movement_check = false;
 	    }
@@ -72,8 +73,10 @@ switch(soldier_state)
 	break;
 
 }
-if(obj_cursor.selected == noone) highlighted = false;
-if(obj_cursor.selected == id) highlighted = true;
+if(selected_empty()) highlighted = false;
+if(global.selected == id) highlighted = true;
+
+collision_wall();
 
 x += hsp;
 y += vsp;

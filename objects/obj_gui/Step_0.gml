@@ -8,7 +8,7 @@ if(point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),fire_but
 {
 	with(obj_cursor)
 	{
-		if(selected != noone)selected.soldier_state = status.fire; 
+		if(selected_full())global.selected.soldier_state = status.fire; 
 		cursor_state = mode.target;
 	}
 }
@@ -21,7 +21,7 @@ if(point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),duck_but
 {
 	with(obj_cursor) 
 	{
-		if(selected != noone) selected.soldier_state = status.duck;
+		if(selected_full()) global.selected.soldier_state = status.duck;
 	}
 }
 

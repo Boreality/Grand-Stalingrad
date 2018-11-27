@@ -17,5 +17,6 @@
 	window_set_fullscreen(true);
 
 
+	global.selected = noone;
 
 room_goto_next(); //Leave for menu

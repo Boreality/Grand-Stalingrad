@@ -1,6 +1,6 @@
 /// @desc
 
-selected = noone;
+
 
 grab_object = noone;
 

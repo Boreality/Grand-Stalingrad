@@ -9,16 +9,16 @@ key_fire = keyboard_check_pressed(ord("B"));
 key_duck = keyboard_check_pressed(ord("F"));
 
 
-if(!instance_exists(selected)) selected = noone;
+if(!instance_exists(global.selected)) global.selected = noone;
 
 if(lclick) && (place_meeting(x,y,obj_soldier))
 {
-	selected = collision_point(x,y,obj_soldier,false,true)
+	global.selected = collision_point(x,y,obj_soldier,false,true)
 }
 if(key_escape) or (key_middlemouse)
 {
 	cursor_state = mode.cursor;	
-	selected = noone;
+	global.selected = noone;
 }
 
 switch(cursor_state)
@@ -27,11 +27,15 @@ switch(cursor_state)
 		image_index = 0;
 		if(rclick)
 		{
-			if(selected != noone)
-			{
-				selected.order_position_x = id.x;
-				selected.order_position_y = id.y;
-				selected.soldier_state = status.movement;
+			if(selected_full())
+			{	
+				with(global.selected)
+				{
+					order_position_x = other.x;
+					order_position_y = other.y;
+					
+					soldier_state = status.movement;
+				}
 			}
 		}
 		
@@ -46,9 +50,9 @@ switch(cursor_state)
 	case mode.target:
 		image_index = 1;
 		
-		if(rclick) && (selected != noone) && (selected.available)
+		if(rclick) && (selected_full()) && (global.selected.available)
 		{
-			with(selected)
+			with(global.selected)
 			{
     			firing_location_x = other.x;
     			firing_location_y = other.y;
@@ -57,32 +61,15 @@ switch(cursor_state)
 		}
 	break;
 	case mode.grab:
-		image_index = 2;
-		if(rclick) && (selected != noone) && (!selected.hasgun)
-		{
-			if(collision_circle(x,y,30,selected,false,true))
-			{
-				grab_object = collision_point(x,y,obj_gun,false,true)
-				with(grab_object)
-				{
-					owner = obj_cursor.selected;	
-					with(obj_cursor.selected) hasgun = true;
-				}
-			}
-			else
-			{
-				selected.order_position_x = id.x;
-				selected.order_position_y = id.y;
-				selected.soldier_state = status.movement;
-			}
-		}
-		if(!place_meeting(x,y,obj_gun)) cursor_state = mode.cursor; grab_object = noone;
+		cursor_mode_grab();
+		cursor_mode_grab_reset();
+		
 	break;
 	
 }
 //Mode SHortcuts
 if(key_fire) cursor_state = mode.target;
-if(key_fire) with(selected) soldier_state = status.duck;
+if(key_fire) with(global.selected) soldier_state = status.duck;
 
 
 

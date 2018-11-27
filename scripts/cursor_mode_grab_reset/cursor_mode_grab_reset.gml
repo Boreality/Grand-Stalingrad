@@ -1,0 +1,1 @@
+if(!place_meeting(x,y,obj_gun)) cursor_state = mode.cursor; grab_object = noone;
