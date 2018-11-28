@@ -1,25 +1,11 @@
 x = mouse_x;
 y = mouse_y;
 
-lclick = mouse_check_button_pressed(mb_left);
-rclick = mouse_check_button_pressed(mb_right);
-key_escape = keyboard_check_pressed(vk_escape);
-key_middlemouse = mouse_check_button(mb_middle);
-key_fire = keyboard_check_pressed(ord("B"));
-key_duck = keyboard_check_pressed(ord("F"));
+cursor_input();
 
+selecting_auto();
+deselecting_auto();
 
-if(!instance_exists(global.selected)) global.selected = noone;
-
-if(lclick) && (place_meeting(x,y,obj_soldier))
-{
-	global.selected = collision_point(x,y,obj_soldier,false,true)
-}
-if(key_escape) or (key_middlemouse)
-{
-	cursor_state = mode.cursor;	
-	global.selected = noone;
-}
 
 switch(cursor_state)
 {

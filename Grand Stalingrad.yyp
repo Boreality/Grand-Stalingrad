@@ -429,6 +429,30 @@
                 "resourcePath": "objects\\obj_cursor\\obj_cursor.yy",
                 "resourceType": "GMObject"
             }
+        },
+        {
+            "Key": "1C1D9D01-E208-AE7F-5EBC-40A982485E4C",
+            "Value": {
+                "id": "259886DE-8FC5-68F7-DA27-EE12B6863EB5",
+                "resourcePath": "scripts\\cursor_input\\cursor_input.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8CC4B485-E725-9505-FC88-1296EBDC2C05",
+            "Value": {
+                "id": "89EF8FC4-09C8-53D2-12A5-DA2AFC4725DB",
+                "resourcePath": "scripts\\selecting_auto\\selecting_auto.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7C5F83D8-8C87-3538-5FFE-54AF1FA49454",
+            "Value": {
+                "id": "01689183-7332-F606-1ECA-4987B254E3B7",
+                "resourcePath": "scripts\\deselecting_auto\\deselecting_auto.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
