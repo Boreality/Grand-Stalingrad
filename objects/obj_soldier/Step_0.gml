@@ -5,7 +5,7 @@ switch(soldier_state)
 		sprite_index = spr_soldier;
 		reset_movement_check = true; 
 		
-		if(order_position_x != -1) && (order_position_y != -1) // if has desitnation
+		if(order_position_full()) // if has desitnation
 		{
 			direction = point_direction(x,y,order_position_x,order_position_y);
 			hsp = lengthdir_x(3,direction);
@@ -27,21 +27,8 @@ switch(soldier_state)
 	   
 	   //If selsected and firing, stop?!
 	    //Canceling traveling stage
-	    if(reset_movement_check)
-	    {
-    		halt_movement();
-    		direction = 0;
-			
-    		order_position_x = -1;
-            order_position_y = -1;
-			firing_location_x = -1;
-			firing_location_y = -1;
-			
-    		available = true;   
-    		reset_movement_check = false;
-	    }
-		
-		
+		reset_movement_stage();
+
 		//SHooty code
 		if(hasgun)
 		{
@@ -52,15 +39,7 @@ switch(soldier_state)
 				if(firing_delay <= 0)
 				{
 					direction = point_direction(x,y,firing_location_x,firing_location_y)+ random_range((-other.bullet_offset + other.aim),(other.bullet_offset-other.aim));
-					with(instance_create_layer(x,y,"Soldiers",obj_bullet))
-					{
-						direction = other.direction;
-						image_angle = direction ;
-						speed = 10;
-						owner_gun = other.my_gun;
-						owner_soldier = other.id;
-						
-					}
+					fire_bullet();
 					//
 					firing_delay = firing_delay_max;
 				}
