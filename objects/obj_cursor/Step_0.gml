@@ -11,7 +11,7 @@ switch(cursor_state)
 {
 	case mode.cursor:
 		image_index = 0;
-		if(rclick)
+		if(rclick) && (!place_meeting(x,y,obj_wall)) && (!place_meeting(x,y,obj_cover))
 		{
 			if(selected_full())
 			{	

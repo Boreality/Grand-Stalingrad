@@ -77,6 +77,7 @@ if(selected_empty()) highlighted = false;
 if(global.selected == id) highlighted = true;
 
 collision_wall();
+collision_cover();
 
 x += hsp;
 y += vsp;
