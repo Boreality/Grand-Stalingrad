@@ -1,1 +1,0 @@
-if(order_position_x != -1) && (order_position_y != -1) return true;
