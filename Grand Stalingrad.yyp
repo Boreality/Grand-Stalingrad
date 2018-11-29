@@ -453,6 +453,46 @@
                 "resourcePath": "scripts\\deselecting_auto\\deselecting_auto.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "A57787B3-B017-F959-772E-58D02EC1EC1F",
+            "Value": {
+                "id": "F0E3B877-3A42-8113-6E0F-E253E2F79DA0",
+                "resourcePath": "scripts\\fire_bullet\\fire_bullet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "844855A4-600A-D08B-9CF7-A26A3227221A",
+            "Value": {
+                "id": "7C46CCB5-A324-A2B7-5407-9721B4EE62F2",
+                "resourcePath": "scripts\\reset_movement_stage\\reset_movement_stage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6DA53D71-958A-E8CA-6230-DA0190777981",
+            "Value": {
+                "id": "17F403A9-5EC0-36B7-13F3-A819A312A091",
+                "resourcePath": "scripts\\cursor_movement_reachedDestination\\cursor_movement_reachedDestination.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "FF0F659F-99D7-1469-F8D7-4F006B4A3B94",
+            "Value": {
+                "id": "0BFCECD2-3616-B2E2-2A0D-72731370AA05",
+                "resourcePath": "scripts\\cursor_movement_moving\\cursor_movement_moving.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "A53C6893-ADBB-7EB0-24E5-F90637270281",
+            "Value": {
+                "id": "D187AD9A-209F-D2A7-A3DF-FDC5EE12AE4D",
+                "resourcePath": "scripts\\order_position_full\\order_position_full.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
