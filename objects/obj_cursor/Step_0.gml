@@ -55,7 +55,7 @@ switch(cursor_state)
 }
 //Mode SHortcuts
 if(key_fire) cursor_state = mode.target;
-if(key_fire) with(global.selected) soldier_state = status.duck;
+//if(key_fire) with(global.selected) soldier_state = status.duck;
 
 
 

@@ -60,3 +60,5 @@ collision_cover();
 
 x += hsp;
 y += vsp;
+
+

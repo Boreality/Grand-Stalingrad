@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "128710b2-82b4-489d-b7da-b72d2c6c5214",
+            "Value": {
+                "id": "11564c98-319e-4b58-8d31-3714732468df",
+                "resourcePath": "scripts\\draw_set_text\\draw_set_text.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "16813067-e4a2-4c63-ac95-7b56ae6f7687",
             "Value": {
                 "id": "85198a21-6142-494d-b520-e4abcc39e095",
@@ -164,6 +172,14 @@
                 "id": "5dbd0fd2-abe3-4db3-8916-c103794d9407",
                 "resourcePath": "fonts\\fnt_debug\\fnt_debug.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "4b4b95b9-f91d-459b-ab79-1ada3dadd705",
+            "Value": {
+                "id": "b09a6633-1f66-4200-9546-2c20b8e63059",
+                "resourcePath": "sprites\\spr_gui_info_soldier\\spr_gui_info_soldier.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -343,6 +359,14 @@
             }
         },
         {
+            "Key": "af9f66db-3c6d-4287-ad16-27d24eeee785",
+            "Value": {
+                "id": "1750957e-aa3f-48ba-a20b-a15ab4e706e8",
+                "resourcePath": "objects\\obj_textbox\\obj_textbox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b10f4ba4-0df4-4d65-aeaa-bc5d27066588",
             "Value": {
                 "id": "e9d509c4-9968-425a-b9c6-234bac7fda4b",
@@ -495,6 +519,14 @@
             }
         },
         {
+            "Key": "f81b3fba-8e5d-4cf2-bf6f-8092bb13f30d",
+            "Value": {
+                "id": "7cdbc95a-aff7-4f3e-bf11-117e5cadf729",
+                "resourcePath": "sprites\\spr_textbox\\spr_textbox.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fc926503-b40c-4604-846f-16796eae3ce2",
             "Value": {
                 "id": "7646fe1c-74ca-43f2-a91c-6b5130f2756f",
@@ -527,7 +559,8 @@
         "898d0bda-6068-4e80-8e3f-070f1044d32d",
         "d7d0dd53-6a5d-4ff1-9b24-532c8927093c",
         "6baa2756-0c9e-47ac-a2e5-3ab110f251fb",
-        "7fc8cf6d-62cd-4202-a041-fe19abd2ceea"
+        "7fc8cf6d-62cd-4202-a041-fe19abd2ceea",
+        "128710b2-82b4-489d-b7da-b72d2c6c5214"
     ],
     "tutorial": ""
 }
