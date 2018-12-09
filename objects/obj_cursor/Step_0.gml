@@ -15,6 +15,7 @@ switch(cursor_state)
 		{
 			if(selected_full())
 			{	
+				move_circle_create();
 				with(global.selected)
 				{
 					order_position_x = other.x;

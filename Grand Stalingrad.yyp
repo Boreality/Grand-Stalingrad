@@ -63,11 +63,27 @@
             }
         },
         {
+            "Key": "15143df4-917d-49f7-823f-36d775f6517a",
+            "Value": {
+                "id": "7e456c7e-8392-47c7-933d-92ab08bf3b52",
+                "resourcePath": "objects\\obj_move_target\\obj_move_target.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "16813067-e4a2-4c63-ac95-7b56ae6f7687",
             "Value": {
                 "id": "85198a21-6142-494d-b520-e4abcc39e095",
                 "resourcePath": "scripts\\macros\\macros.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1723ef68-e4db-4a80-8bd5-9396f9cda535",
+            "Value": {
+                "id": "3869af04-5428-47f6-8b21-48b5e55b9d66",
+                "resourcePath": "sprites\\spr_move_target\\spr_move_target.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -471,6 +487,14 @@
             }
         },
         {
+            "Key": "e320507a-258d-497a-bbe6-40589664de0a",
+            "Value": {
+                "id": "644c449a-6d5e-4d39-afba-7aefdfa8deae",
+                "resourcePath": "scripts\\move_circle_create\\move_circle_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e6f0b9bf-e2ac-4e63-b438-24717ea7e227",
             "Value": {
                 "id": "97598bcd-600b-4988-977b-ed97e0d21e2e",
@@ -560,7 +584,8 @@
         "d7d0dd53-6a5d-4ff1-9b24-532c8927093c",
         "6baa2756-0c9e-47ac-a2e5-3ab110f251fb",
         "7fc8cf6d-62cd-4202-a041-fe19abd2ceea",
-        "128710b2-82b4-489d-b7da-b72d2c6c5214"
+        "128710b2-82b4-489d-b7da-b72d2c6c5214",
+        "e320507a-258d-497a-bbe6-40589664de0a"
     ],
     "tutorial": ""
 }
