@@ -13,7 +13,7 @@ switch(soldier_state)
 			//speed = 4;
 			available = false;
 			
-			if(point_in_circle(x,y,order_position_x,order_position_y,30))
+			if(point_in_circle(x,y,order_position_x,order_position_y,30)) // reached destination
 			{
 				halt_movement();
 				direction = 0;
