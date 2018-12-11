@@ -1,4 +1,4 @@
-spd = 0.25;  // # of chars per frame
+spd = 0.5;  // # of chars per frame
 letters = 0;
 text = "This is a test string\nSecond Line";
 text = "Stamina: 15 \nHealth: 20 \nWill: 1";

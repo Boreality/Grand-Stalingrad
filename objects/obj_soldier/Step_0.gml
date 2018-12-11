@@ -62,3 +62,22 @@ x += hsp;
 y += vsp;
 
 
+
+//Enemy Soldier AI
+/*
+    Planning
+    Want to be able to trigger custom behavior based on duds + other factors (low ammo means leaving)
+    Need mutliple types of enemies, eatch with own behavior tree.
+    Ex. Charge solider. Takes one hit, staggers and tries to run back. firing as running. Usually becomes one after a while of low morale
+        Gatling gun. Stays in one place and fires unrelenting barrage of machine gun fire. Takes as long to fire as it does to reload. shoots at proscribed place and any enemy within range
+        tank: (boss?) moves around the city. Takes lots of hits and soldiers come pouring out as it catches fire or stops working. Has a normal machine gun, but also large bullet that negates cover
+        sniper. Stays in spot, fires at one destination (line between them and target, shooting whoever.)
+        Default intantry. will generally be hiding behind cover, occasionally shooting but for really low amount of times.
+        
+        
+
+some 
+
+*/
+
+

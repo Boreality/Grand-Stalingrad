@@ -11,6 +11,7 @@ switch(cursor_state)
 {
 	case mode.cursor:
 		image_index = 0;
+		//Moving
 		if(rclick) && (!place_meeting(x,y,obj_wall)) && (!place_meeting(x,y,obj_cover))
 		{
 			if(selected_full())
@@ -25,13 +26,19 @@ switch(cursor_state)
 				}
 			}
 		}
-		
+		//Grab mode switch
 		with(collision_point(x,y,obj_gun,false,true))//(collision_circle(x,y,2,obj_gun,false,true)) // if cursor touching gun 
 		{
 			if(owner == noone)
 			{
 				with(other)cursor_state = mode.grab;
 			}
+		}
+		//Information getting
+		if(selected_full) && (key_info)
+		{
+		    instance_create_layer(x,y,"Text",obj_textbox)
+		}
 		}
 	break;
 	case mode.target:

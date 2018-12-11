@@ -8,10 +8,8 @@ if(h == 0) h = string_height(text);
 w = string_width(text_current); 
 
 //destroy when done
-if(letters > length) && (interact)
+if(letters > length) && (obj_cursor.key_escape);
 {
 	instance_destroy();
 	
 }
-
-
