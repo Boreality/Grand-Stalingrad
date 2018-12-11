@@ -12,5 +12,5 @@ draw_roundrect_ext(x1,y1,x2,y,15,15,false);
 draw_set_alpha(1);
 
 //draw text
-draw_set_text(c_white,fnt_text, fa_center, fa_top);
+draw_set_text(c_white,fnt_debug, fa_center, fa_top);
 draw_text(x,y-h-border,text_current);

@@ -35,12 +35,13 @@ switch(cursor_state)
 			}
 		}
 		//Information getting
-		if(selected_full) && (key_info)
-		{
-		    instance_create_layer(x,y,"Text",obj_textbox)
-		}
-		}
+		//if(selected_full) && (key_info)
+		//{
+		//   stat_block_create(x,y);
+		//}
+		
 	break;
+	
 	case mode.target:
 		image_index = 1;
 		
@@ -54,6 +55,7 @@ switch(cursor_state)
 			}
 		}
 	break;
+	
 	case mode.grab:
 		cursor_mode_grab();
 		cursor_mode_grab_reset();

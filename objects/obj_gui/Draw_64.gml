@@ -8,6 +8,6 @@ draw_text(20,60,"Cursor mode: " + string(obj_cursor.cursor_state))
 
 draw_sprite(spr_gui_fire,image_index,fire_buttonx,fire_buttony);
 draw_sprite(spr_gui_duck,image_index,duck_buttonx,duck_buttony);
-
+draw_sprite(spr_gui_info_soldier,image_index,info_buttonx,info_buttony);
 
 
