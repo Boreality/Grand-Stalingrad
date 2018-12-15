@@ -11,5 +11,5 @@ w = string_width(text_current);
 if(letters > length) && (obj_cursor.key_escape)
 {
 	instance_destroy();
-	
 }
+if(owner != global.selected) instance_destroy();

@@ -52,8 +52,8 @@ switch(soldier_state)
 	break;
 
 }
-if(selected_empty()) highlighted = false;
-if(global.selected == id) highlighted = true;
+//if(selected_empty()) highlighted = false;
+if(ds_list_find_index(global.selected,id) != -1) highlighted = true;
 
 collision_wall();
 collision_cover();

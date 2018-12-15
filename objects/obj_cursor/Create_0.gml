@@ -1,6 +1,8 @@
 /// @desc
+rect_startx = 0;
+rect_starty = 0;
 
-
+large_selecting = false;
 
 grab_object = noone;
 

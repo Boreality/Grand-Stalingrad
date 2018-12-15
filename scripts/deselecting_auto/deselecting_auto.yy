@@ -1,5 +1,5 @@
 {
-    "id": "7C5F83D8-8C87-3538-5FFE-54AF1FA49454",
+    "id": "7c5f83d8-8c87-3538-5ffe-54af1fa49454",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "deselecting_auto",

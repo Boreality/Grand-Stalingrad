@@ -1,25 +1,37 @@
 image_index = 2;
-		if(rclick) && (selected_full())
+		if(rclick) && ((selected_full()) && (ds_list_size(global.selected) == 1))
 		{
-			if(collision_circle(x,y,30,global.selected,false,true))
+			var soldier = ds_list_find_value(global.selected,0)
+			if(collision_circle(x,y,30,soldier,false,true))
 			{
-				if(!global.selected.hasgun)
-				{
+				if(!soldier.hasgun)
+					{
 					grab_object = collision_point(x,y,obj_gun,false,true)
 					with(grab_object)
 					{
-						owner = global.selected;	
-						with(global.selected) hasgun = true;
+						owner = soldier;	
+						with(soldier) hasgun = true;
 					}
 				}
 			}
 			else
 			{
-				with(global.selected)
+				var i = 0;
+				repeat(ds_list_size(global.selected))
 				{
-					order_position_x = other.x;
-					order_position_y = other.y;
-					soldier_state = status.movement;
+					
+					//with(global.selected)
+					with(ds_list_find_value(global.selected,i))
+					{
+						order_position_x = other.x;
+						order_position_y = other.y;
+						soldier_state = status.movement;
+					}
+					i++;
 				}
+				//with(global.selected)
+				//{
+					
+				//}
 			}
 		}

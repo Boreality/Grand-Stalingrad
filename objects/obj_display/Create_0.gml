@@ -16,7 +16,8 @@
 	window_set_size(global.ideal_width,global.ideal_height);
 	window_set_fullscreen(true);
 
-
-	global.selected = noone;
+	
+	global.selected = ds_list_create();
+	ds_list_add(global.selected,noone);
 
 room_goto_next(); //Leave for menu

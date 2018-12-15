@@ -1,5 +1,5 @@
 {
-    "id": "1C1D9D01-E208-AE7F-5EBC-40A982485E4C",
+    "id": "1c1d9d01-e208-ae7f-5ebc-40a982485e4c",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "cursor_input",

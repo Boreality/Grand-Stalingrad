@@ -8,4 +8,5 @@ with(instance_create_layer(argument0,argument1,"GUI",obj_textbox))
 	var strength = string(global.selected.strength);
 	var dexterity = string(global.selected.dexterity);
 	text = ("Aim: " + aim + " \nConstitution: "+constitution+" \nWill: "+will+"\nStrength: "+strength+"\nDexterity: "+dexterity);
+	owner = global.selected;
 }
