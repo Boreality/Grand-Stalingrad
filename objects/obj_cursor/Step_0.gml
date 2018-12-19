@@ -10,8 +10,20 @@ if(lclick)
 	
 	if(place_meeting(x,y,obj_soldier))
 	{
-		ds_list_add(global.selected,collision_point(x,y,obj_soldier,false,true));
-		//global.selected = collision_point(x,y,obj_soldier,false,true);
+	    if(ds_exists(global.selected,))
+	    {
+	    	ds_list_add(global.selected,collision_point(x,y,obj_soldier,false,true));
+	    	//global.selected = collision_point(x,y,obj_soldier,false,true);
+	    }
+	    else
+	    {
+	        global.selected = ds_list_create();
+	        ds_list_add(global.selected,collision_point(x,y,obj_soldier,false,true));
+	    }
+	}
+	else
+	{
+	    ds_list_destroy(global.selected);
 	}
 }
 //Creating a box to select multiple soldiers
@@ -60,8 +72,6 @@ switch(cursor_state)
 				with(other)cursor_state = mode.grab;
 			}
 		}
-		
-		
 	break;
 	
 	case mode.target:

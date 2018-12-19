@@ -8,7 +8,19 @@ if(point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),fire_but
 {
 	with(obj_cursor)
 	{
-		if(selected_full())global.selected.soldier_state = status.fire; 
+		if(selected_full())
+		{
+		   	var k = 0;
+			repeat(ds_list_size(global.selected))
+			{
+				//with(global.selected)
+				with(ds_list_find_value(global.selected,k))
+				{
+					soldier_state = status.fire; 
+				}
+				k++;
+			}
+		}
 		cursor_state = mode.target;
 	}
 }
@@ -21,7 +33,19 @@ if(point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),duck_but
 {
 	with(obj_cursor) 
 	{
-		if(selected_full()) global.selected.soldier_state = status.duck;
+		if(selected_full())
+		{
+	    	var v = 0;
+			repeat(ds_list_size(global.selected))
+			{
+				//with(global.selected)
+				with(ds_list_find_value(global.selected,v))
+				{
+					soldier_state = status.duck; 
+				}
+				v++;
+			}
+		}
 	}
 }
 var info_buttonx1 = info_buttonx;

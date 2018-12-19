@@ -15,6 +15,8 @@ var h = -(y1-y2);
 image_xscale = w/sprite_width;
 image_yscale = h/sprite_height;
 
+if(!ds_exists(global.selected,))   global.selected = ds_list_create();
+
 //Getting Collisions
 var _list = ds_list_create();
 hit_count = instance_place_list(x,y,obj_soldier,_list,false);
