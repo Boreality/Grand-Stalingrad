@@ -1,12 +1,16 @@
 /// @desc stat_block_create(x,y)
  
-with(instance_create_layer(argument0,argument1,"GUI",obj_textbox))
+if(ds_exists(global.selected)) && (ds_list_size(global.selected) == 1)
 {
-	var aim = string(global.selected.aim);
-	var constitution = string(global.selected.constitution);
-	var will = string(global.selected.will);
-	var strength = string(global.selected.strength);
-	var dexterity = string(global.selected.dexterity);
-	text = ("Aim: " + aim + " \nConstitution: "+constitution+" \nWill: "+will+"\nStrength: "+strength+"\nDexterity: "+dexterity);
-	owner = global.selected;
+    with(instance_create_layer(argument0,argument1,"GUI",obj_textbox))
+    {
+        var soldier = ds_list_find_value(global.selected,0);
+    	var aim = string(soldier.aim);
+    	var constitution = string(soldier.constitution);
+    	var will = string(soldier.will);
+    	var strength = string(soldier.strength);
+    	var dexterity = string(soldier.dexterity);
+    	text = ("Aim: " + aim + " \nConstitution: "+constitution+" \nWill: "+will+"\nStrength: "+strength+"\nDexterity: "+dexterity);
+    	owner = global.selected;
+    }
 }
