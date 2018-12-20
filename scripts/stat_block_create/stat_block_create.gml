@@ -11,6 +11,6 @@ if(ds_exists(global.selected)) && (ds_list_size(global.selected) == 1)
     	var strength = string(soldier.strength);
     	var dexterity = string(soldier.dexterity);
     	text = ("Aim: " + aim + " \nConstitution: "+constitution+" \nWill: "+will+"\nStrength: "+strength+"\nDexterity: "+dexterity);
-    	owner = global.selected;
+    	owner = soldier;
     }
 }

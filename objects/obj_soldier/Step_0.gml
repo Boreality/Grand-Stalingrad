@@ -26,9 +26,8 @@ switch(soldier_state)
 	case status.fire:
 	   
 	   //If selsected and firing, stop?!
-	    //Canceling traveling stage
+	   //Canceling traveling stage
 		reset_movement_stage();
-
 		//SHooty code
 		if(hasgun)
 		{
