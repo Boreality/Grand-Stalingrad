@@ -10,20 +10,28 @@ if(lclick)
 	
 	if(place_meeting(x,y,obj_soldier))
 	{
-	    if(ds_exists(global.selected,))
+	    if(ds_exists(global.selected,ds_type_list))
 	    {
-	    	ds_list_add(global.selected,collision_point(x,y,obj_soldier,false,true));
-	    	//global.selected = collision_point(x,y,obj_soldier,false,true);
+			if(ds_list_find_index(global.selected,other) == -1)
+			{
+	    		ds_list_add(global.selected,collision_point(x,y,obj_soldier,false,true));
+			}
+			
 	    }
 	    else
 	    {
 	        global.selected = ds_list_create();
-	        ds_list_add(global.selected,collision_point(x,y,obj_soldier,false,true));
+			if(ds_list_find_index(global.selected,other) == -1)
+			{
+				 ds_list_add(global.selected,collision_point(x,y,obj_soldier,false,true));
+			}
 	    }
 	}
 	else
 	{
-	    ds_list_destroy(global.selected);
+		//deselecting();
+	    //ds_list_destroy(global.selected);
+		var bleh = 0;
 	}
 }
 //Creating a box to select multiple soldiers
@@ -37,7 +45,6 @@ if(lclick_release)
 }
 
 deselecting_auto();
-
 
 switch(cursor_state)
 {
@@ -107,5 +114,20 @@ if(key_fire) cursor_state = mode.target;
 //if(key_fire) with(global.selected) soldier_state = status.duck;
 
 
+//Remove extra items from selected list
+if(ds_exists(global.selected,ds_type_list)) && (selected_full())
+{
+	var i_ = 0;
+	repeat(ds_list_size(global.selected))
+	{
+		var current_val = ds_list_find_value(global.selected,i_);
+		if(ds_list_find_index(global.selected,current_val) != i_)			
+		{
+			ds_list_delete(global.selected,i_);
+		}
+		
+		i_++;
+	}
+}
 
 

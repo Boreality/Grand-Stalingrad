@@ -6,23 +6,23 @@ var fire_buttony1 = fire_buttony;
 var fire_buttony2 = fire_buttony + 64;
 if(point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),fire_buttonx1,fire_buttony1,fire_buttonx2,fire_buttony2)) && (obj_cursor.lclick)
 {
-	with(obj_cursor)
+	
+	if(selected_full())
 	{
-		if(selected_full())
+		
+		var i = 0;
+		repeat(ds_list_size(global.selected))
 		{
-		   	var k = 0;
-			repeat(ds_list_size(global.selected))
+			
+			with(ds_list_find_value(global.selected,i))
 			{
-				//with(global.selected)
-				with(ds_list_find_value(global.selected,k))
-				{
-					soldier_state = status.fire; 
-				}
-				k++;
+				soldier_state = status.fire; 
 			}
+			i++;
 		}
-		cursor_state = mode.target;
 	}
+	obj_cursor.cursor_state = mode.target;
+	
 }
 
 var duck_buttonx1 = duck_buttonx;
@@ -31,22 +31,21 @@ var duck_buttony1 = duck_buttony;
 var duck_buttony2 = duck_buttony + 64;
 if(point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),duck_buttonx1,duck_buttony1,duck_buttonx2,duck_buttony2)) && (obj_cursor.lclick)
 {
-	with(obj_cursor) 
+	
+	if(selected_full())
 	{
-		if(selected_full())
+	    var i_ = 0;
+		repeat(ds_list_size(global.selected))
 		{
-	    	var v = 0;
-			repeat(ds_list_size(global.selected))
+				
+			with(ds_list_find_value(global.selected,i_))
 			{
-				//with(global.selected)
-				with(ds_list_find_value(global.selected,v))
-				{
-					soldier_state = status.duck; 
-				}
-				v++;
+				soldier_state = status.duck; 
 			}
+			i_++;
 		}
 	}
+	
 }
 var info_buttonx1 = info_buttonx;
 var info_buttonx2 = info_buttonx + 64;

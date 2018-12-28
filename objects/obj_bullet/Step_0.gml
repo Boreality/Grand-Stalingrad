@@ -12,6 +12,12 @@ if(!place_meeting(x,y,owner_soldier))
 		instance_destroy();	
 		with(other) instance_destroy();	
 	}
+	with(collision_point(x,y,obj_nazi_soldier,false,true))
+	{
+		instance_create_layer(x,y,"Soldiers",obj_soldier_dead);
+		instance_destroy();	
+		with(other) instance_destroy();	
+	}
 }
 
 

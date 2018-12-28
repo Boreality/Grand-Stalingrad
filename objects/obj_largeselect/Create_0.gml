@@ -15,7 +15,7 @@ var h = -(y1-y2);
 image_xscale = w/sprite_width;
 image_yscale = h/sprite_height;
 
-if(!ds_exists(global.selected,))   global.selected = ds_list_create();
+if(!ds_exists(global.selected,ds_type_list))   global.selected = ds_list_create();
 
 //Getting Collisions
 var _list = ds_list_create();
@@ -24,7 +24,10 @@ repeat(hit_count)
 {
 	with(ds_list_find_value(_list,0))
 	{
-		ds_list_add(global.selected,id);
+		if(ds_list_find_index(global.selected,other) == -1)
+		{
+			ds_list_add(global.selected,id);
+		}
 	}
 	ds_list_delete(_list,0);
 }

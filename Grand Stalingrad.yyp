@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "1a84e3a3-85d1-441c-a871-514598838c86",
+            "Value": {
+                "id": "c6ccb595-e988-45af-8241-2ebe2b707596",
+                "resourcePath": "sprites\\spr_nazi_turret\\spr_nazi_turret.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1b9758ef-058b-42e0-aff2-dc450f86d3bd",
             "Value": {
                 "id": "29758a51-41b6-454b-aea0-bceb76c57f4e",
@@ -124,6 +132,14 @@
                 "id": "259886de-8fc5-68f7-da27-ee12b6863eb5",
                 "resourcePath": "scripts\\cursor_input\\cursor_input.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "1d89b1f1-3386-46c2-9eb3-5b22fcc6da59",
+            "Value": {
+                "id": "b0f6d15c-4174-4429-8326-d3f8ec26ed52",
+                "resourcePath": "objects\\obj_nazi_turret\\obj_nazi_turret.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -148,6 +164,14 @@
                 "id": "ad4e37e3-f09b-483d-90ff-2540a101c3a7",
                 "resourcePath": "views\\248c2fa3-5ff8-4cc2-a1e5-09d665a2e4ab.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "266b0369-8f70-4f63-8b9d-f156e30c6f7b",
+            "Value": {
+                "id": "5b5c76bb-edd2-4026-b6d3-e409fbfa4b27",
+                "resourcePath": "scripts\\deselecting\\deselecting.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -188,6 +212,22 @@
                 "id": "76304128-cb98-465c-8d5b-f04735caf4f2",
                 "resourcePath": "sprites\\spr_gui_duck\\spr_gui_duck.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "410682e5-ec00-4422-958e-04fa94cade2a",
+            "Value": {
+                "id": "965e018d-b57f-402c-8e08-bda1e50ac4bd",
+                "resourcePath": "objects\\obj_nazi_popup\\obj_nazi_popup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "436a7369-ca32-4642-a3e7-53e0bcbb4f1d",
+            "Value": {
+                "id": "6dc3a5f4-be53-4e7e-b46f-30ebbcaaeabd",
+                "resourcePath": "objects\\obj_nazi_tank\\obj_nazi_tank.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -244,6 +284,14 @@
                 "id": "571eba9c-f923-4274-b5c6-222bb5440388",
                 "resourcePath": "scripts\\selected_full\\selected_full.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6b9945d1-a1ec-4043-b5cc-baf5c3fda988",
+            "Value": {
+                "id": "11422326-2e10-4e53-bc7d-971efd709343",
+                "resourcePath": "objects\\obj_nazi_soldier\\obj_nazi_soldier.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -356,6 +404,14 @@
                 "id": "4526029b-2430-4c33-94ea-f7ffa57e6ee3",
                 "resourcePath": "objects\\obj_largeselect\\obj_largeselect.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9696eaca-e2b2-44c4-991d-23790cdd80bd",
+            "Value": {
+                "id": "b84fce9b-2e27-47a5-8066-03104e41294d",
+                "resourcePath": "sprites\\spr_nazi_soldier\\spr_nazi_soldier.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -584,14 +640,15 @@
         }
     ],
     "script_order": [
-        "16813067-e4a2-4c63-ac95-7b56ae6f7687",
         "d344bb2f-066e-43c5-a334-5728cbf61d8b",
+        "16813067-e4a2-4c63-ac95-7b56ae6f7687",
         "69ac2dec-ab94-480e-beae-8d6c787533e7",
         "f167318f-fb92-4404-818a-66e798348d2e",
         "4c811dc7-4fb9-4763-8053-1a1820188225",
         "c421d794-1a15-448d-b708-6097176aae54",
         "94087039-7c09-43ed-b063-2013b4852326",
         "6ecb3fa7-e0a8-4e59-88b7-8a6e7eea52de",
+        "266b0369-8f70-4f63-8b9d-f156e30c6f7b",
         "7c5f83d8-8c87-3538-5ffe-54af1fa49454",
         "1c1d9d01-e208-ae7f-5ebc-40a982485e4c",
         "88acf3d1-d7c8-4963-b755-6afdf0b02564",

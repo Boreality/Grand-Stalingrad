@@ -12,3 +12,4 @@ enum mode {
 	target,
 	grab
 }
+deselecting();

@@ -1,6 +1,6 @@
 /// @desc stat_block_create(x,y)
  
-if(ds_exists(global.selected)) && (ds_list_size(global.selected) == 1)
+if(ds_exists(global.selected,ds_type_list)) && (ds_list_size(global.selected) == 1)
 {
     with(instance_create_layer(argument0,argument1,"GUI",obj_textbox))
     {
