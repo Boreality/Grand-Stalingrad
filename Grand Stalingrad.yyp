@@ -637,6 +637,14 @@
                 "resourcePath": "objects\\obj_cursor\\obj_cursor.yy",
                 "resourceType": "GMObject"
             }
+        },
+        {
+            "Key": "BAAE170F-F7D9-6143-1566-9A8181399C4B",
+            "Value": {
+                "id": "1015A7F3-7B67-62EC-8DE2-BB0269D28714",
+                "resourcePath": "scripts\\set_firing_location\\set_firing_location.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [

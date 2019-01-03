@@ -50,62 +50,31 @@ switch(nazi_status)
 	break;
 	
 	case BEHAVIOR.FIRE:
-			/*
-			nearest_soviet_ = instance_nearest(x,y,obj_soldier);
-			distance_soviet_ = distance_to_object(nearest_soviet_);
-			if(distance_soviet_ <= activation_radius_)
-			{
-				update_timer--;
-				if(update_timer <= 0) //&& (incover)
-				{
-					firing_locationx = nearest_soviet_.x;
-					firing_locationy = nearest_soviet_.y;
-					direction = point_direction(x,y,firing_locationx,firing_locationy);
-					update_timer = update_timer_max;
-				}
-			}
-			else
-			{
-				firing_locationx = -1;
-				firing_locationy = -1;
-				direction = 0;
-			
-			
-			}
-		*/
-		
-		
-		
-		
-		
-		
-		
-		update_timer--;
-		if(update_timer <= 0) //&& (incover)
+
+		nearest_soviet_ = instance_nearest(x,y,obj_soldier);
+		distance_soviet_ = distance_to_object(nearest_soviet_);
+		if(distance_soviet_ <= activation_radius_)
 		{
-			nearest_soviet_ = instance_nearest(x,y,obj_soldier);
-			distance_soviet_ = distance_to_object(nearest_soviet_);
-			if(distance_soviet_ <= activation_radius_)
-			{
-				firing_locationx = nearest_soviet_.x;
-				firing_locationy = nearest_soviet_.y;
-				direction = point_direction(x,y,firing_locationx,firing_locationy);
-			}
-			else
-			{
-				firing_locationx = -1;
-				firing_locationy = -1;
-				direction = 0;
-			}
-			update_timer = update_timer_max;
+			set_firing_location(nearest_soviet_.x,nearest_soviet_.y);
+		    focus_timer = focus_timer_max;
+		} else {
+		    focus_timer--;
+		    if(focus_timer <= 0)
+		    {
+		       firing_locationx = -1;
+			   firing_locationy = -1; 
+		    }
+		    
+		    
 		}
 		
-		//constant fire unkess otherwise
+		//constant fire unless otherwise
 		if(firing_locationx != -1) && (firing_locationy != -1)
 		{
 			fire_delay--;
 			if(fire_delay <= 0)
 			{
+			    direction = point_direction(x,y,firing_locationx,firing_locationy);
 				fire_bullet();
 				fire_delay = fire_delay_max;
 			}
