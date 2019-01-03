@@ -14,5 +14,5 @@ if(fire_delay <= 0)
 
 
 // Inherit the parent event
-event_inherited();
+//event_inherited();
 
