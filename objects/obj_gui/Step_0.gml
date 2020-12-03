@@ -47,6 +47,7 @@ if(point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),duck_but
 	}
 	
 }
+/*
 var info_buttonx1 = info_buttonx;
 var info_buttonx2 = info_buttonx + 64;
 var info_buttony1 = info_buttony;
@@ -59,7 +60,7 @@ if(point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),info_but
 	}
 }
 
-
+*/
 
 
 

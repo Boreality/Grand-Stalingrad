@@ -39,7 +39,7 @@ switch(soldier_state)
 				{
 					direction = point_direction(x,y,firing_location_x,firing_location_y)+ random_range((-other.bullet_offset + other.aim),(other.bullet_offset-other.aim));
 					fire_bullet();
-					//
+					
 					firing_delay = firing_delay_max;
 				}
 			}
@@ -55,13 +55,42 @@ switch(soldier_state)
 //if(selected_empty()) highlighted = false;
 //if(ds_list_find_index(global.selected,id) != -1) highlighted = true;
 
-collision_wall();
+//x collisoin
+if(place_meeting(x+hsp,y,obj_wall))
+{	
+	hsp = 0;
+}
+
+//y collision
+if(place_meeting(x,y+vsp,obj_wall))
+{
+	vsp = 0;
+}
 collision_cover();
 
 x += hsp;
 y += vsp;
 
-
+////hsp
+//if (place_meeting(x+hsp,y,obj_soldier)){
+//    var sx = sign(hsp);
+//    while(!place_meeting(x+sx,y,obj_soldier)){
+//        x += sx;
+//    }
+//    hsp = 0;
+//} else{
+//    x += hsp;
+//}  
+////for vsp
+//if (place_meeting(x,y+vsp,obj_soldier)){
+//    var sy = sign(vsp);
+//    while(!place_meeting(x,y+sy,obj_soldier)){
+//        y += sy;
+//    }
+//    vsp = 0;
+//} else{
+//    y += vsp;
+//}  
 
 //Enemy Soldier AI
 /*

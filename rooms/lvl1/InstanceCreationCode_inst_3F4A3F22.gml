@@ -1,0 +1,1 @@
+nazi_status = BEHAVIOR.IDLE;

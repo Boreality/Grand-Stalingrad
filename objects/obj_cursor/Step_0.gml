@@ -79,6 +79,25 @@ switch(cursor_state)
 				with(other)cursor_state = mode.grab;
 			}
 		}
+		
+		//fire key
+		if(key_fire){
+			
+			if(selected_full())
+			{
+		
+				var i = 0;
+				repeat(ds_list_size(global.selected))
+				{
+			
+					with(ds_list_find_value(global.selected,i))
+					{
+						soldier_state = status.fire; 
+					}
+					i++;
+				}
+			}	
+		}
 	break;
 	
 	case mode.target:
@@ -100,6 +119,7 @@ switch(cursor_state)
 				i++;
 			}
 		}
+		if(lclick)cursor_state = mode.cursor;
 	break;
 	
 	case mode.grab:
@@ -124,6 +144,7 @@ if(ds_exists(global.selected,ds_type_list)) && (selected_full())
 		if(ds_list_find_index(global.selected,current_val) != i_)			
 		{
 			ds_list_delete(global.selected,i_);
+			
 		}
 		
 		i_++;

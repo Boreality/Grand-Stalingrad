@@ -1,7 +1,7 @@
 
 hsp = 0;
 vsp = 0;
-grab_speed = 1;
+grab_speed = 2;
 hasgun = false;
 my_gun = noone;
 
@@ -15,19 +15,17 @@ focus_timer = 0;
 
 nearest_soviet_ = 0;
 distance_soviet_ = 0;
-activation_radius_ = 200;
+activation_radius_ = 250;
 
 firing_locationx = 0;
 firing_locationy = 0;
 
+grab_radius = 230;
 
 enum BEHAVIOR
 {
-	GRAB_GUN,
-	TAKE_COVER,
 	IDLE,
-	FIRE
-	
-	
+	FIRE,
+	GRAB_GUN
 }
-nazi_status = BEHAVIOR.FIRE;
+nazi_status = BEHAVIOR.IDLE;

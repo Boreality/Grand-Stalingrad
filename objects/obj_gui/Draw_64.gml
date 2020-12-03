@@ -1,18 +1,17 @@
 /// @desc debug and interface
 display_set_gui_size(global.ideal_width,global.ideal_height);
-
 draw_set_font(fnt_debug);
-if(ds_exists(global.selected,ds_type_list)) draw_text(20,20,string(global.selected));
+//if(ds_exists(global.selected,ds_type_list)) draw_text(20,20,string(global.selected));
 
-if(instance_exists(obj_soldier))draw_text(20,40,string(obj_soldier.order_position_x));
-draw_text(20,60,"Cursor mode: " + string(obj_cursor.cursor_state))
+//if(instance_exists(obj_soldier))draw_text(20,40,string(obj_soldier.order_position_x));
+//draw_text(20,60,"Cursor mode: " + string(obj_cursor.cursor_state))
 
 draw_sprite(spr_gui_fire,image_index,fire_buttonx,fire_buttony);
 draw_sprite(spr_gui_duck,image_index,duck_buttonx,duck_buttony);
-draw_sprite(spr_gui_info_soldier,image_index,info_buttonx,info_buttony);
+//draw_sprite(spr_gui_info_soldier,image_index,info_buttonx,info_buttony);
 
 if(ds_exists(global.selected,ds_type_list))
 {
 	var list_num = ds_list_size(global.selected);
-	draw_text(20,300,string(list_num));
+	draw_text(20,300,"# Selected: "+ string(list_num));
 }

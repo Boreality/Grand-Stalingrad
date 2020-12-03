@@ -7,6 +7,7 @@ if(fire_delay <= 0)
 	{
 		speed = bullet_speed;
 		direction = other.direction + irandom_range(-other.bullet_spread,other.bullet_spread);
+		image_angle = direction;
 	}
 	fire_delay = fire_delay_max;
 }

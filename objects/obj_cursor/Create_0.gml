@@ -13,3 +13,4 @@ enum mode {
 	grab
 }
 deselecting();
+once = true;

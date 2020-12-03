@@ -27,6 +27,7 @@ repeat(hit_count)
 		if(ds_list_find_index(global.selected,other) == -1)
 		{
 			ds_list_add(global.selected,id);
+			id.selected =true;
 		}
 	}
 	ds_list_delete(_list,0);
